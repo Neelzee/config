@@ -1,0 +1,14 @@
+dconf
+evolution
+goa-*
+gtk-*
+ibus
+nautilus
+pulse
+.gsd-keyboard.settings-ported
+GNOME-xdg-terminals.list
+gnome-initial-setup-done
+user-dirs.dirs
+user-dirs.locale
+xdg-terminals.list
+
