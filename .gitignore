@@ -11,4 +11,9 @@ gnome-initial-setup-done
 user-dirs.dirs
 user-dirs.locale
 xdg-terminals.list
+uv
+no.*
+libreoffice
+gnome-session
+monitors.*
 
