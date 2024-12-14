@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ../../modules/dev/nmide.nix
     ];
 
   # Bootloader.
@@ -66,6 +67,9 @@
 
   environment.systemPackages = with pkgs; [
     home-manager
+    rustc
+    cargo
+    spotify
   ];
 
   # This value determines the NixOS release from which the default
