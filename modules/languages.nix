@@ -7,6 +7,10 @@
     cargo
     # Haskell
     ghc
+    # Python
+    python3
+    # Node
+    nodejs
   ];
 }
 
