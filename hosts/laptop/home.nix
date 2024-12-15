@@ -22,7 +22,7 @@
       };
   };
 
-  home.packages = [];
+  home.packages = with pkgs; [];
 
   home.file = {};
 
