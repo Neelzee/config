@@ -4,7 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../common.nix
+      ./modules/common.nix
     ];
 
   # Bootloader.
@@ -86,6 +86,4 @@
 
 ## Enables flakes
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
-home-manager.useUserPackages = true;
-home-manager.users.nmf = import ./home.nix;
 }

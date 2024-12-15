@@ -12,4 +12,4 @@ sudo nixos-rebuild switch --flake ~/Documents/nix-config#laptop
 ## TODO
 
 - [ ] Seperate modules into system/home-manager
-- [ ] Create neovim config
+- [x] Create neovim config

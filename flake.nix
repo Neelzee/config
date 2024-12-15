@@ -13,21 +13,25 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, nixvim, flake-parts, ... } @ inputs:
+  outputs = inputs @ { self, nixpkgs, home-manager, nixvim, ... }:
     let
       system = "x86_64-linux";
     in
     {
-      nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
         system = system;
         modules = [
-          ./hosts/laptop/configuration.nix
-          home-manager.nixosModules.home-manager
-          nixvim.nixosModules.nixvim
+          ./configuration.nix
+	  home-manager.nixosModules.home-manager {
+	    home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.sharedModules = [
+              nixvim.homeManagerModules.nixvim
+            ];
+            home-manager.users.nmf = import ./home.nix;
+          }
         ];
-        specialArgs = {
-          inherit nixpkgs home-manager nixvim;
-        };
+        specialArgs = inputs;
       };
     };
 }
