@@ -13,7 +13,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, ... }:
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, nixvim, ... }:
     let
       system = "x86_64-linux";
     in
@@ -23,6 +23,7 @@
         modules = [
           ./hosts/laptop/configuration.nix
           home-manager.nixosModules.home-manager
+          nixvim.nixosModules.nixvim
         ];
         specialArgs = {
           inherit nixpkgs home-manager;
