@@ -13,7 +13,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, nixvim, ... }:
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, nixvim, flake-parts, ... } @ inputs:
     let
       system = "x86_64-linux";
     in
@@ -26,7 +26,7 @@
           nixvim.nixosModules.nixvim
         ];
         specialArgs = {
-          inherit nixpkgs home-manager;
+          inherit nixpkgs home-manager nixvim;
         };
       };
     };

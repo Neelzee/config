@@ -1,7 +1,4 @@
 { config, pkgs, inputs, ... }:
-let
-  nixvim = inputs.nixvim.homeManagerModules.nixvim;
-in
 {
 
   imports = [

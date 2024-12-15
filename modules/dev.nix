@@ -4,7 +4,7 @@
   imports = [
     ./programs/alacritty.nix
     ./programs/git.nix
-    ./programs/lazyvim.nix
+    #./programs/lazyvim.nix
     ./programs/starship.nix
   ];
 }
