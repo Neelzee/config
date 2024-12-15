@@ -1,10 +1,10 @@
 { config, pkgs, inputs, ... }:
-
 {
 
   imports = [
     ../../modules/common.nix
     ../../modules/dev.nix
+    ../../dotfiles/nixvim.nix
   ];
 
   home.username = "nmf";
