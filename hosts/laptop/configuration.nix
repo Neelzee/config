@@ -67,8 +67,6 @@
 
   environment.systemPackages = with pkgs; [
     home-manager
-    rustc
-    cargo
     spotify
   ];
 
