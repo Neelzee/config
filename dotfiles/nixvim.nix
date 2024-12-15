@@ -1,6 +1,7 @@
 { config, pkgs, inputs, ... }:
 let
-  nixvim = inputs.nixvim;
+  nixvim = import nixvim;
 in
 {
+
 }
