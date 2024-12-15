@@ -1,10 +1,13 @@
 { config, pkgs, inputs, ... }:
+let
+  nixvim = inputs.nixvim.homeManagerModules.nixvim;
+in
 {
 
   imports = [
     ../../modules/common.nix
     ../../modules/dev.nix
-    ../../dotfiles/nixvim.nix
+    #../../dotfiles/nixvim.nix
   ];
 
   home.username = "nmf";
