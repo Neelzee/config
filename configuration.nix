@@ -35,6 +35,13 @@
     variant = "";
   };
 
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+  };
+
   # Configure console keymap
   console.keyMap = "no";
 
@@ -69,6 +76,9 @@
     home-manager
     vim
     spotify
+    xclip
+    alacritty
+    starship
   ];
 
   fonts.packages = with pkgs; [
