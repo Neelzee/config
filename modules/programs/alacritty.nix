@@ -10,7 +10,7 @@
       normal = {
           family = "FiraCode Nerd Font";
         };
-      size = 12.0;
+      size = 14.0;
     };
   };
 }

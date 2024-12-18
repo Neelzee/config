@@ -1,4 +1,7 @@
 { ... }:
 {
-  imports = [ ./neotree.nix ];
+  imports 
+    = [
+      ./neotree.nix
+    ];
 }

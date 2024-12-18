@@ -68,6 +68,7 @@
   environment.systemPackages = with pkgs; [
     home-manager
     vim
+    xclip
     spotify
   ];
 
