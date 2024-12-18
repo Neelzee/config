@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  programs.nixvim.plugins = {
+  plugins = {
     conform-nvim.settings = {
       formatters_by_ft = {
         json = [ "jq" ];

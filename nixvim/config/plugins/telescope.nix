@@ -1,9 +1,8 @@
 { pkgs, ... }:
 {
-  programs.nixvim.plugins = {
-    web-devicons.enable = true;
-    project-nvim.enableTelescope = true;
-    telescope = {
+    plugins.web-devicons.enable = true;
+    plugins.project-nvim.enableTelescope = true;
+    plugins.telescope = {
       enable = true;
       extensions = {
         fzf-native.enable = true;
@@ -142,5 +141,4 @@
         };
       };
     };
-  };
 }

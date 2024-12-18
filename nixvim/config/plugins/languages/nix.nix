@@ -3,7 +3,7 @@ let
   flake = "/home/nmf/Documents/nix-config";
 in
 {
-  programs.nixvim.plugins = {
+  plugins = {
     nix.enable = true;
     hmts.enable = true;
     nix-develop.enable = true;
@@ -45,7 +45,7 @@ in
     };
   };
 
-  programs.nixvim.extraConfigVim = ''
+  extraConfigVim = ''
     au BufRead,BufNewFile flake.lock setf json
   '';
 }
