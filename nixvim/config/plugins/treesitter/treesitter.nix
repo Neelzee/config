@@ -1,5 +1,6 @@
 {
-    plugins.treesitter = {
+  plugins = {
+    treesitter = {
       enable = true;
       settings = {
         highlight.enable = true;
@@ -8,4 +9,6 @@
       };
       nixvimInjections = true;
     };
+    treesitter-context.enable = true;
+  };
 }

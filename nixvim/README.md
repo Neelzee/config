@@ -23,3 +23,5 @@ nix profile upgrade nixvim
 ## Notes
 
 `opts` -> `settings`
+
+Yanked from [Akari](https://github.com/spector700/Akari)

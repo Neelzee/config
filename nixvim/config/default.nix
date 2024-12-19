@@ -1,11 +1,19 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
-  imports = 
-    [
-      ./settings.nix  
-      ./keymaps.nix
-      ./plugins
-    ];
-  colorschemes.catppuccin.enable = true;
-  plugins.lualine.enable = true;
+  enableMan = false;
+  # Import all your configuration modules here
+  imports = [
+    ./autocmd.nix
+    ./keymaps.nix
+    ./settings.nix
+    ./lazy.nix
+    ./plugins
+  ];
+
+  extraPackages = with pkgs; [
+    ripgrep
+    lazygit
+    fzf
+    fd
+  ];
 }
