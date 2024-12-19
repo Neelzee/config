@@ -5,6 +5,7 @@
     ./modules/programs/git.nix
     ./modules/programs/starship.nix
     ./modules/tmux.nix
+    ./modules/languages.nix
   ];
 
   home.username = "nmf";
@@ -22,7 +23,7 @@
     };
   };
 
-  home.packages = with pkgs; [];
+  home.packages = with pkgs; [ ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
