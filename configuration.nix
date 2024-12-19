@@ -79,6 +79,7 @@
     xclip
     alacritty
     starship
+    tmux
   ];
 
   fonts.packages = with pkgs; [

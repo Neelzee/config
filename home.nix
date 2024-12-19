@@ -4,6 +4,7 @@
     ./modules/programs/alacritty.nix
     ./modules/programs/git.nix
     ./modules/programs/starship.nix
+    ./modules/tmux.nix
   ];
 
   home.username = "nmf";
