@@ -76,10 +76,6 @@
             priority = 20;
           }
           {
-            name = "zsh";
-            priority = 20;
-          }
-          {
             name = "calc";
             priority = 10;
           }
