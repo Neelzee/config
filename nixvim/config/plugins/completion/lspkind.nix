@@ -10,8 +10,6 @@
       calc = "";
       git = "";
       luasnip = "󰩫";
-      codeium = "󱜙";
-      copilot = "";
       emoji = "󰞅";
       path = "";
       spell = "";
@@ -55,8 +53,6 @@
       Calendar = "";
       Watch = "󰥔";
       Package = "";
-      Copilot = "";
-      Codeium = "";
       TabNine = "";
     };
 

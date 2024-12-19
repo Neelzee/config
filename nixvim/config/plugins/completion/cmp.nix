@@ -1,12 +1,6 @@
 { lib, helpers, ... }:
 {
   plugins = {
-    # cmp-nvim-lsp.enable = true;
-    # cmp-emoji.enable = true;
-    # cmp-buffer.enable = true;
-    # cmp-path.enable = true;
-    # cmp_luasnip.enable = true;
-    # cmp-cmdline.enable = true;
     cmp = {
       enable = true;
       autoEnableSources = true;
@@ -61,10 +55,6 @@
           {
             name = "luasnip";
             priority = 70;
-          }
-          {
-            name = "codeium";
-            priority = 60;
           }
           {
             name = "buffer";
