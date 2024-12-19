@@ -99,7 +99,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<C-Tab>";
+      key = "gt";
       action = "<cmd>BufferLineCycleNext<cr>";
       options = {
         desc = "Cycle to next buffer";
@@ -108,7 +108,7 @@
 
     {
       mode = "n";
-      key = "<C-S-Tab>";
+      key = "gT";
       action = "<cmd>BufferLineCyclePrev<cr>";
       options = {
         desc = "Cycle to previous buffer";

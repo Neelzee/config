@@ -129,15 +129,18 @@
         silent = true;
       };
     }
-    {
-      mode = "n";
-      key = "gt";
-      action = "<cmd>Lspsaga goto_type_definition<CR>";
-      options = {
-        desc = "Type Definitions";
-        silent = true;
-      };
-    }
+    # NOTE: Commented out because:
+    # - I don't know what this is used for
+    # - I am using `gt` for moving to buffer
+    #{
+    #  mode = "n";
+    #  key = "gt";
+    #  action = "<cmd>Lspsaga goto_type_definition<CR>";
+    #  options = {
+    #    desc = "Type Definitions";
+    #    silent = true;
+    #  };
+    #}
     {
       mode = "n";
       key = "gpd";
