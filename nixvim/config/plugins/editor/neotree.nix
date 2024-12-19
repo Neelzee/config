@@ -76,6 +76,10 @@ in
 
       window.mappings = {
         "<space>" = "none";
+        # Allows for collapsing/uncollapsing folders using h-l
+        "l" = "open";
+        "h" = "close_node";
+        "P" = "toggle_preview";
       };
     };
 
