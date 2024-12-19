@@ -15,7 +15,7 @@
     enable = true;
     shellAliases = {
       nmide = "cd ~/Documents/nmide";
-      config = "cd ~/Documents/nix-config";
+      config = "cd ~/Documents/nix-config && nix-shell";
       rebuildOs = "sudo nixos-rebuild switch --flake ~/Documents/nix-config#laptop";
       rebuildHa = "home-manager switch -f ~/Documents/nix-config/hosts/laptop/home.nix";
     };
