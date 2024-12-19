@@ -4,5 +4,6 @@
     [ 
       ./json.nix 
       ./nix.nix
+      ./rust.nix
     ];
 }
