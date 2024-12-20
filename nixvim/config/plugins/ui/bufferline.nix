@@ -108,7 +108,25 @@
 
     {
       mode = "n";
+      key = "L";
+      action = "<cmd>BufferLineCycleNext<cr>";
+      options = {
+        desc = "Cycle to next buffer";
+      };
+    }
+
+    {
+      mode = "n";
       key = "gT";
+      action = "<cmd>BufferLineCyclePrev<cr>";
+      options = {
+        desc = "Cycle to previous buffer";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "H";
       action = "<cmd>BufferLineCyclePrev<cr>";
       options = {
         desc = "Cycle to previous buffer";
