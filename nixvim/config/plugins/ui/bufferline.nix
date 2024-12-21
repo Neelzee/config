@@ -144,6 +144,15 @@
 
     {
       mode = "n";
+      key = "<leader>bd";
+      action = "<cmd>:bp | bd #<cr>";
+      options = {
+        desc = "Delete buffer";
+      };
+    }
+
+    {
+      mode = "n";
       key = "<leader>br";
       action = "<cmd>BufferLineCloseRight<cr>";
       options = {
