@@ -4,10 +4,18 @@
 
     lsp = {
       enable = true;
-      servers.typos_lsp.enable = true;
       keymaps.lspBuf = {
         "<c-k>" = "signature_help";
         "gi" = "implementation";
+      };
+      servers = {
+        typos_lsp.enable = true;
+        rust_analyzer = {
+          enable = true;
+          installCargo = true;
+          installRustc = true;
+          installRustfmt = true;
+        };
       };
     };
     lint.enable = true;
