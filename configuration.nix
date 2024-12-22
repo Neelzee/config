@@ -1,11 +1,15 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./modules/common.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./modules/common.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -63,9 +67,12 @@
   users.users.nmf = {
     isNormalUser = true;
     description = "Nils Michael Fitjar";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -80,10 +87,13 @@
     alacritty
     starship
     tmux
+    zip
+    unzip
   ];
 
   fonts.packages = with pkgs; [
-   (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    noto-fonts-emoji
     fira-code
   ];
 
@@ -95,6 +105,9 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
 
-## Enables flakes
-nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  ## Enables flakes
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }
