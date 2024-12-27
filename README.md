@@ -1,15 +1,14 @@
 Flake does not include untracked files, so remember to add new/moved files.
 
 ```shell
-home-manager switch -f ~/Documents/nix-config/hosts/laptop/home.nix
+home-manager switch -f ~/Documents/nix-config/home.nix
 ```
 
 ```shell
-sudo nixos-rebuild switch --flake ~/Documents/nix-config#laptop
+sudo nixos-rebuild switch --flake ~/Documents/nix-config#default
 ```
 
+## To-do
 
-## TODO
-
-- [ ] Seperate modules into system/home-manager
+- [ ] Separate modules into system/home-manager
 - [x] Create neovim config
