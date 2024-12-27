@@ -3,18 +3,14 @@
     catppuccin = {
       enable = true;
       settings = {
-        background = {
-          light = "macchiato";
-          dark = "mocha";
-        };
-        flavour = "macchiato"; # “latte”, “mocha”, “frappe”, “macchiato”, “auto”
-        transparent_background = true;
+        flavour = "frappe";
         integrations = {
           cmp = true;
           flash = true;
           fidget = true;
           gitsigns = true;
           indent_blankline.enabled = true;
+          bufferline = true;
           lsp_trouble = true;
           mini.enabled = true;
           neotree = true;
