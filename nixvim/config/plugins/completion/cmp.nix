@@ -2,8 +2,8 @@
 {
   plugins = {
     cmp = {
-      enable = false;
-      autoEnableSources = false;
+      enable = true;
+      autoEnableSources = true;
 
       cmdline = {
         "/" = {
@@ -67,31 +67,11 @@
             name = "path";
             priority = 30;
           }
-          {
-            name = "git";
-            priority = 20;
-          }
-          {
-            name = "npm";
-            priority = 20;
-          }
-          {
-            name = "calc";
-            priority = 10;
-          }
-          {
-            name = "emoji";
-            priority = 5;
-          }
 
           # Disable this if running tests with nix flake check
           (lib.mkIf helpers.enableExceptInTests { name = "nixpkgs_maintainers"; })
         ];
 
-        window = {
-          completion.border = "rounded";
-          documentation.border = "rounded";
-        };
         experimental.ghost_text = true;
 
         mapping = {
