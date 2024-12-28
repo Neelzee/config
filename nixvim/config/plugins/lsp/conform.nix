@@ -1,27 +1,31 @@
-{ pkgs, lib, ... }:
+{ ... }:
 {
   plugins.conform-nvim = {
     enable = true;
     settings = {
-      format_on_save = {
-        lspFallback = true;
-        timeoutMs = 500;
-      };
+      notify_on_error = true;
+      format_on_save = ''
+        function(bufnr)
+          -- Disable "format_on_save lsp_fallback" for lanuages that don't
+          -- have a well standardized coding style. You can add additional
+          -- lanuages here or re-enable it for the disabled ones.
+          local disable_filetypes = { c = true, cpp = true }
+          return {
+            timeout_ms = 500,
+            lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype]
+          }
+        end
+      '';
       formatters_by_ft = {
-        # Use the "_" filetype to run formatters on filetypes that don't have other formatters configured.
-        "_" = [
-          "squeeze_blanks"
-          "trim_whitespace"
-          "trim_newlines"
+        lua = [ "stylua" ];
+        # Conform can also run multiple formatters sequentially
+        # python = [ "isort "black" ];
+        javascript = [
+          [
+            "prettierd"
+            "prettier"
+          ]
         ];
-      };
-      formatters = {
-        _ = {
-          command = "${pkgs.gawk}/bin/gawk";
-        };
-        squeeze_blanks = {
-          command = lib.getExe' pkgs.coreutils "cat";
-        };
       };
     };
   };

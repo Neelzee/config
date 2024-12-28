@@ -13,7 +13,6 @@
 
     clipboard = {
       providers = {
-        wl-copy.enable = true;
         xclip.enable = true;
       };
       register = "unnamedplus";
@@ -36,7 +35,7 @@
       expandtab = true;
 
       smartindent = true;
-      wrap = true;
+      wrap = false;
 
       # Smart indent on word wrap
       breakindent = true;
@@ -92,7 +91,7 @@
       if g.neovide then
         -- Neovide options
         g.neovide_fullscreen = false
-        g.neovide_hide_mouse_when_typing = false
+        g.neovide_hide_mouse_when_typing = true
         g.neovide_refresh_rate = 165
         g.neovide_cursor_vfx_mode = "ripple"
         g.neovide_cursor_animate_command_line = true
@@ -103,9 +102,9 @@
         g.neovide_transparency = 0.8
 
         -- Neovide Fonts
-        o.guifont = "MonoLisa Trial:Medium:h15"
+        -- o.guifont = "MonoLisa Trial:Medium:h15"
         -- o.guifont = "CommitMono:Medium:h15"
-        -- o.guifont = "JetBrainsMono Nerd Font:h14:Medium:i"
+        o.guifont = "JetBrainsMono Nerd Font:h14:Medium:i"
         -- o.guifont = "FiraMono Nerd Font:Medium:h14"
         -- o.guifont = "CaskaydiaCove Nerd Font:h14:b:i"
         -- o.guifont = "BlexMono Nerd Font Mono:h14:Medium:i"
