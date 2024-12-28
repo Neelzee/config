@@ -6,6 +6,7 @@
     cargo
     # Haskell
     ghc
+    stack
     # Python
     python3
     # Node
