@@ -89,6 +89,7 @@
     tmux
     zip
     unzip
+    nodePackages.eslint_d
   ];
 
   fonts.packages = with pkgs; [
