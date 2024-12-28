@@ -8,6 +8,11 @@ home-manager switch -f ~/Documents/nix-config/home.nix
 sudo nixos-rebuild switch --flake ~/Documents/nix-config#default
 ```
 
+**Upgrade**:
+```shell
+nix flake update
+```
+
 ## To-do
 
 - [ ] Separate modules into system/home-manager
