@@ -33,47 +33,6 @@
       };
 
       settings = {
-        # Preselect first entry
-        completion.completeopt = "menu,menuone,noinsert";
-        sources = [
-          {
-            name = "nvim_lsp";
-            priority = 100;
-          }
-          {
-            name = "nvim_lsp_signature_help";
-            priority = 100;
-          }
-          {
-            name = "nvim_lsp_document_symbol";
-            priority = 100;
-          }
-          {
-            name = "treesitter";
-            priority = 80;
-          }
-          {
-            name = "luasnip";
-            priority = 70;
-          }
-          {
-            name = "buffer";
-            priority = 50;
-            # Words from other open buffers can also be suggested.
-            option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
-            keywordLength = 3;
-          }
-          {
-            name = "path";
-            priority = 30;
-          }
-
-          # Disable this if running tests with nix flake check
-          (lib.mkIf helpers.enableExceptInTests { name = "nixpkgs_maintainers"; })
-        ];
-
-        experimental.ghost_text = true;
-
         mapping = {
           "<Tab>".__raw = ''
             cmp.mapping(function(fallback)
