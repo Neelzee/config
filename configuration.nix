@@ -71,8 +71,13 @@
       "networkmanager"
       "wheel"
     ];
+    # For eduroam
+    # Download this script: https://cat.eduroam.org/
+    # And run it, so, not declerative 😢
     packages = [
-      #  thunderbird
+      (pkgs.python3.withPackages (python-pkgs: [
+        python-pkgs.dbus-python
+      ]))
     ];
   };
 
