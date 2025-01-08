@@ -16,6 +16,13 @@
           installRustc = true;
           installRustfmt = true;
         };
+        purescriptls = {
+          enable = true;
+          package = null;
+          filetypes = [
+            "purs"
+          ];
+        };
       };
     };
     lint.enable = true;
