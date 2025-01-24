@@ -27,6 +27,10 @@
     };
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-sdk-6.0.428"
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -113,6 +117,8 @@
     zip
     unzip
     nodePackages.eslint_d
+    godot_4-mono
+    jetbrains.rider
   ];
 
   fonts.packages = with pkgs; [
