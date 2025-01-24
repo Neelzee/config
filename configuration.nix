@@ -9,6 +9,24 @@
     ./modules/common.nix
   ];
 
+  # Automatic updating
+  system.autoUpgrade = {
+    enable = true;
+    dates = "weekly";
+  };
+
+  # Automatic cleanup
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "daily";
+      options = "--delete-older-than 10d";
+    };
+    settings = {
+      auto-optimise-store = true;
+    };
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
