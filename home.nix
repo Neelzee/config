@@ -28,5 +28,9 @@
         rebuildHa = "home-manager switch -f ~/Documents/nix-config/hosts/laptop/home.nix";
       };
     };
+
+    bat = {
+      enable = true;
+    };
   };
 }
