@@ -118,7 +118,7 @@
     unzip
     nodePackages.eslint_d
     godot_4-mono
-    jetbrains.rider
+    jetbrains-toolbox
   ];
 
   fonts.packages = with pkgs; [
