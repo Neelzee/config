@@ -23,6 +23,14 @@
             "purs"
           ];
         };
+        ltex = {
+          enable = true;
+          filetypes = [
+            "latex"
+            "tex"
+            "bib"
+          ];
+        };
       };
     };
     lint.enable = true;
