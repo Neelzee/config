@@ -19,7 +19,7 @@
   nix = {
     gc = {
       automatic = true;
-      dates = "daily";
+      dates = "Sun"; # Every sunday?
       options = "--delete-older-than 10d";
     };
     settings = {
