@@ -119,6 +119,8 @@
     nodePackages.eslint_d
     godot_4-mono
     jetbrains-toolbox
+    obsidian
+    zoom-us
   ];
 
   fonts.packages = with pkgs; [
