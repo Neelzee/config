@@ -31,6 +31,9 @@
             "bib"
           ];
         };
+        pylsp = {
+          enable = true;
+        };
       };
     };
     lint.enable = true;
