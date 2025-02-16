@@ -23,6 +23,10 @@
             "purs"
           ];
         };
+        hls = {
+          enable = true;
+          installGhc = true;
+        };
         ltex = {
           enable = true;
           filetypes = [
