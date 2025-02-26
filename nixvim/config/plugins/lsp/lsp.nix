@@ -19,9 +19,6 @@
         purescriptls = {
           enable = true;
           package = null;
-          filetypes = [
-            "purs"
-          ];
         };
         hls = {
           enable = true;
@@ -34,9 +31,6 @@
             "tex"
             "bib"
           ];
-        };
-        pylsp = {
-          enable = true;
         };
       };
     };

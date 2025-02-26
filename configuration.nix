@@ -121,6 +121,7 @@
     jetbrains-toolbox
     obsidian
     zoom-us
+    vscode
   ];
 
   fonts.packages = with pkgs; [
