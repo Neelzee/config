@@ -31,6 +31,9 @@
             "tex"
             "bib"
           ];
+          extraOptions = {
+            use_spellfile = true;
+          };
         };
       };
     };
