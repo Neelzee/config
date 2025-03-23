@@ -19,7 +19,7 @@
   nix = {
     gc = {
       automatic = true;
-      dates = "Sun"; # Every sunday?
+      dates = "monthly";
       options = "--delete-older-than 10d";
     };
     settings = {
@@ -121,7 +121,6 @@
     jetbrains-toolbox
     obsidian
     zoom-us
-    vscode
   ];
 
   fonts.packages = with pkgs; [
